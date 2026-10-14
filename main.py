@@ -35,7 +35,13 @@ from core.weather import WeatherCollector
 
 def _setup_encoding():
     """Windows 控制台默认 GBK，统一为 UTF-8 避免中文乱码。"""
-    for stream in (sys.stdout, sys.stderr):
+    for name in ("stdout", "stderr"):
+        stream = getattr(sys, name)
+        if stream is None:
+            # pythonw（无控制台）下流为 None，任何 print 都会抛 AttributeError；
+            # 重定向到 devnull，保证静默启动路径不崩溃
+            setattr(sys, name, open(os.devnull, "w", encoding="utf-8"))
+            continue
         try:
             stream.reconfigure(encoding="utf-8", errors="replace")
         except (AttributeError, ValueError):
