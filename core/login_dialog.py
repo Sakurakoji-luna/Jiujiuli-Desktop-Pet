@@ -11,6 +11,9 @@ class LoginDialog(QDialog):
     def __init__(self, api, parent=None):
         super().__init__(parent)
         self._api = api
+        # 与游戏窗口/气泡一致置顶：否则会开在终端、浏览器等其他窗口后面，
+        # 用户点击“登录”看不到任何窗口弹出。
+        self.setWindowFlags(Qt.Window | Qt.WindowStaysOnTopHint)
         self.setWindowTitle("登录 - AI API 接入")
         self.setFixedWidth(440)
 
