@@ -72,6 +72,7 @@ class OldMaidGame:
         self.ai_hand = deck[27:]
         self._discard_pairs(self.player_hand)
         self._discard_pairs(self.ai_hand)
+        self._check_end()   # 弃对后可能已有空手牌，需立即结算
 
     @staticmethod
     def _discard_pairs(hand):
@@ -180,7 +181,8 @@ class OldMaidDialog(QDialog):
         self._game = OldMaidGame()
         self._render()
 
-    def _render(self):
+    def _render(self, status_text=None):
+        """重绘牌面；status_text 为抽牌反馈等临时文案（胜负文案优先）。"""
         g = self._game
         # 清空旧按钮
         for w in self._card_btns:
@@ -226,6 +228,8 @@ class OldMaidDialog(QDialog):
                 self._status.setText("你赢了。……哼，这局只是我大意了，别得意忘形。")
             else:
                 self._status.setText("我赢了哦。早就说过，你赢不了我的。")
+        elif status_text:
+            self._status.setText(status_text)
         elif g.turn == "player":
             self._status.setText("轮到你了。从玖玖里手中抽一张牌吧。")
         else:
@@ -238,14 +242,13 @@ class OldMaidDialog(QDialog):
             return
         paired = card[0] not in [c[0] for c in g.player_hand]
         text = card_text(card)
-        self._status.setText(
-            f"你抽到了 {text}。" + ("正好凑成一对，丢掉了！" if paired else ""))
+        msg = f"你抽到了 {text}。" + ("正好凑成一对，丢掉了！" if paired else "")
         if g.winner is None:
-            self._render()
+            self._render(status_text=msg)
             # 玖玖里回合（延迟一点，更有打牌的感觉）
             self._ai_timer.start(config.OLD_MAID_AI_DELAY_MS)
         else:
-            self._render()
+            self._render()   # 分胜负：显示胜负文案
 
     # ------------------------------------------------------------ 悬停互动
     def eventFilter(self, obj, event):
@@ -289,5 +292,4 @@ class OldMaidDialog(QDialog):
             taunt = self._router.get_pool_line("old_maid")[0]
             if taunt:
                 line += " 「" + taunt + "」"
-        self._status.setText(line)
-        self._render()
+        self._render(status_text=line)

@@ -586,10 +586,10 @@ def selftest():
     called = []
     dlg_h = OldMaidDialog(r, on_line=lambda t, e: called.append((t, e)))
     dlg_h._game.turn = "player"
-    joker_idx = next(i for i, c in enumerate(dlg_h._game.ai_hand)
-                     if c[0] == "JOKER")
-    normal_idx = next(i for i, c in enumerate(dlg_h._game.ai_hand)
-                      if c[0] != "JOKER")
+    # 悬停测试固定一手含小丑的牌：发牌随机，小丑约 51% 落在玩家手中，
+    # 用 next(...) 在玖玖里手牌里找会抛 StopIteration 导致自检中断。
+    dlg_h._game.ai_hand = [JOKER, ("A", "♠")]
+    joker_idx, normal_idx = 0, 1
     _ch, _jch, _cd = (config.OLD_MAID_HOVER_CHANCE,
                       config.OLD_MAID_HOVER_JOKER_CHANCE,
                       config.OLD_MAID_HOVER_COOLDOWN_MS)
