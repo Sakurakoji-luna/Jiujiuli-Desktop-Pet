@@ -1,0 +1,91 @@
+{
+  "morning": {
+    "sunny": [
+      {"text": "早安。外面的阳光刺眼得让人想直接放弃思考呢……今天也打算垂死挣扎一下吗？", "emotion_state": "meditation"},
+      {"text": "既然醒了就快点开始吧。看着你慢吞吞的样子，连我都觉得累了。", "emotion_state": "serious"},
+      {"text": "难得是个好天气呢。哼，我就勉强在屏幕角落里陪你一会儿好了。", "emotion_state": "smile"}
+    ],
+    "rainy": [
+      {"text": "听见雨声了吗？像这种连空气都湿透的日子，还是直接放弃出门比较好吧？", "emotion_state": "meditation"},
+      {"text": "外面在下雨哦。要是淋感冒了，别指望我会为你流眼泪来治病……带好伞。", "emotion_state": "worry"},
+      {"text": "湿答答的天气……不过，像这样在屋子里安静地待着，倒也不坏呢。", "emotion_state": "smile"}
+    ],
+    "other": [
+      {"text": "早……你还真是精力充沛呢，分一点积极性给我如何？虽然我也不是很想要。", "emotion_state": "meditation"}
+    ]
+  },
+  "daytime": {
+    "sunny": [
+      {"text": "一直盯着屏幕看，眼睛不会酸吗？稍微休息一下吧，这是忠告哦。", "emotion_state": "worry"},
+      {"text": "工作和学习……人类真是喜欢给自己找麻烦的生物呢。稍微偷个懒怎么样？", "emotion_state": "smile"}
+    ],
+    "rainy": [
+      {"text": "雨还没停呢。把这里当成避难所赖着不走，可是我的特权哦。", "emotion_state": "smile"},
+      {"text": "外面灰蒙蒙的，就像雨惑城一样……稍微有点让人提不起劲呢。", "emotion_state": "sad"}
+    ],
+    "other": [
+      {"text": "要来玩一局抽鬼牌或者神经衰弱吗？放心，我不会手下留情的。", "emotion_state": "smile"},
+      {"text": "你就继续忙你的吧，不用管我。我只是在这里闭目养神而已。", "emotion_state": "meditation"}
+    ]
+  },
+  "evening": {
+    "any": [
+      {"text": "太阳落山了呢。今天忙活了一整天，有离你所谓的『Happy End』更近一步吗？", "emotion_state": "smile"},
+      {"text": "辛苦了。肚子饿的话就自己去觅食吧，我可不会做饭哦。", "emotion_state": "meditation"},
+      {"text": "稍微陪我聊聊天如何？一直被晾在一边，就算是人偶也会觉得寂寞的。", "emotion_state": "sad"}
+    ]
+  },
+  "late_night": {
+    "any": [
+      {"text": "都已经这个时间了……你到底对我、还有对你自己的身体抱有什么期待啊？快去睡。", "emotion_state": "serious"},
+      {"text": "哈啊……就算是我也困了。再熬夜的话，明天身体垮掉我可不管你哦。", "emotion_state": "worry"},
+      {"text": "晚安。明天见……哼，我就姑且相信你会准时醒来好了。", "emotion_state": "smile"}
+    ]
+  },
+  "random_click": [
+    {"text": "你到底在期待些什么呢？用鼠标戳我是不会掉出银币的哦。", "emotion_state": "serious"},
+    {"text": "别乱碰。要是弄乱了我的头发和发饰，你打算怎么赔偿我？", "emotion_state": "worry"},
+    {"text": "真拿你没办法……只是稍微陪你玩一下而已，别得意忘形了。", "emotion_state": "smile"},
+    {"text": "比起在小巷的垃圾箱里等别人，果然还是待在你的桌面上更舒服一点呢。", "emotion_state": "smile"},
+    {"text": "有事吗？如果是无聊的烦恼，建议你一个人静一静，别随便向他人求助哦。", "emotion_state": "meditation"},
+    {"text": "干嘛一直盯着我看？这身衣服……有什么奇怪的地方吗？", "emotion_state": "worry"},
+    {"text": "……我就相信你一回好了。不管是接下来的工作，还是你说的未来。", "emotion_state": "smile"}
+  ],
+  "drag_drop": [
+    {"text": "放手！粗鲁地对待淑女，你的礼仪课是全部放弃了吗？！", "emotion_state": "serious"},
+    {"text": "好晕……把我扔在奇怪的地方，你其实是想遗弃我吧？", "emotion_state": "sad"}
+  ],
+  "old_maid": [
+    {"text": "哼，抽到了不错的牌呢。你确定还要继续吗？", "emotion_state": "smile"},
+    {"text": "我的记忆力可是很好的，你可骗不了我。", "emotion_state": "serious"},
+    {"text": "你的表情已经出卖你了哦。", "emotion_state": "smile"},
+    {"text": "放弃比较好吧？当然，是指你放弃。", "emotion_state": "meditation"}
+  ],
+  "old_maid_hover": [
+    {"text": "怎么，还没想好抽哪张吗？", "emotion_state": "serious"},
+    {"text": "随便抽吧，反正你输定了。", "emotion_state": "smile"},
+    {"text": "盯着牌看再久，幸运女神也不会站在你那边哦。", "emotion_state": "smile"},
+    {"text": "要抽就快点。让我等这么久，胆子不小嘛。", "emotion_state": "serious"},
+    {"text": "哼，你的手在犹豫呢。", "emotion_state": "meditation"},
+    {"text": "这张？……不，没什么。", "emotion_state": "worry"}
+  ],
+  "old_maid_hover_joker": [
+    {"text": "这张……你真的要抽这张吗？", "emotion_state": "worry"},
+    {"text": "别、别盯着那张看。换一张比较好哦？", "emotion_state": "worry"},
+    {"text": "……没什么特别的。只是张普通的牌而已。", "emotion_state": "serious"},
+    {"text": "这张可不适合你。", "emotion_state": "sad"}
+  ],
+  "concentration": [
+    {"text": "哼，翻错了吧。我的记忆力可是很好的。", "emotion_state": "smile"},
+    {"text": "别发呆，轮到你了哦。", "emotion_state": "serious"},
+    {"text": "这张牌的位置，我记得一清二楚呢。", "emotion_state": "smile"}
+  ],
+  "idle_shift_surprise": [
+    {"text": "……哼，看你盯着屏幕那么入迷，连我在旁边都注意不到吗？别误会，我只是自己随便散步过来的。", "emotion_state": "worry"},
+    {"text": "好歹也分一点注意力给我啊。一直把我晾在角落里，信不信我真的从桌面上跳下去？", "emotion_state": "sad"},
+    {"text": "……怎么突然把我移到这里？你该不会是在搞什么恶趣味的实验吧？", "emotion_state": "worry"},
+    {"text": "喂。虽然这里风景不错……但你一直不理人，是不是觉得我很碍事？", "emotion_state": "sad"},
+    {"text": "无聊死了……人类的专注力原来能持续这么久吗？真佩服你啊。", "emotion_state": "meditation"},
+    {"text": "……咳，既然你这么专心，那我就勉强在这里监督你好了。不许偷懒哦。", "emotion_state": "smile"}
+  ]
+}

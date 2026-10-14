@@ -1,0 +1,15 @@
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 本地运行时数据（含 API Key / 聊天记录 / 窗口位置，切勿上传）
+data/settings.json
+data/chat_history.json
+
+# 本机专用静默启动脚本（内含本机路径）
+run_silent.vbs
+
+# 接口文档（内部开发文档，不上传）
+接口文档.md
+接口文档v1.md
+接口文档v2.md
